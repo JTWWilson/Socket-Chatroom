@@ -80,7 +80,7 @@ if __name__ == '__main__':
                         # messages.append({'sender': (HOST, PORT),'text': typing, 'timestamp': str(datetime.datetime.today())})
                         typing = ''
                     elif event.unicode == "\x08":
-                        typing = typing[-1:]
+                        typing = typing[:-1]
                     else:
                         typing += event.unicode
 
